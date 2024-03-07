@@ -6,3 +6,5 @@ torchvision==0.16.2
 transformers==4.36.2
 einops==0.7.0
 streamlit
+urllib3==1.26.15
+timm
