@@ -3,6 +3,8 @@ from PIL import Image
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import re
 import time
+import timm
+import torchvision
 
 @st.cache_resource
 def load_model():

@@ -1,5 +1,6 @@
 From centos:7
 
+env HF_ENDPOINT="https://hf-mirror.com"
 env BASH_RC=/etc/bashrc
 
 workdir /home/workdir
@@ -26,10 +27,7 @@ run pip install --upgrade pip && \
     pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu && \
     pip cache purge
 
-add moondream moondream
-
-add model_download.py .
-run python3 model_download.py
+# run huggingface-cli download --revision 2024-03-05 vikhyatk/moondream2
 
 add vision.py .
 
